@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- PUT A TITLE IN HERE -->
-    <title>Your Project Title</title>
+    <title>Healthy Coffee</title>
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="describe content of the page here...." />
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
@@ -16,10 +16,144 @@
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
     <script src="scripts/scripts.js" defer></script>
+    <style>
+      body {
+          background-color: gray;
+      }
+      .main {
+          /* it will be a grid layout */
+          display: grid;
+          /* 2 rows and 2 columns */
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 2fr 2fr;
+          height: 80vh;
+          padding: 0 5%;
+          background-color: yellow;
+      }
+      .main > div {
+          margin: 20px;
+      }
+      .functions {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          height: 100%;
+      }
+      .functions > div {
+        margin: 0 20px;
+        margin: 40px;
+      }
+      .bottom-navigation {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          height: 10vh;
+      }
+      .bottom-navigation > button {
+          margin: 20px;
+      }
+
+      .dropbtn {
+          /* in desktop mode it is invisible */
+          display: none;
+      }
+
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+
+      .large-text {
+        font-size: 2rem;
+        font-weight: 900;
+      }
+      /* media queries */
+      @media screen and (max-width: 768px) {
+          .main {
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr 1fr;
+              /* fixed height and overflow scrollable */
+              height: 70vh;
+              overflow-y: scroll;
+          }
+           /*.bottom-navigation become a dropdown list of all buttons*/
+          /* Dropdown content (hidden by default) */
+      .bottom-navigation {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .bottom-navigation button {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      }
+
+      /* Add a grey background color to dropdown links on hover */
+      .bottom-navigation button:hover {
+      background-color: #ddd;
+      }
+      .dropdown {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .dropbtn {
+          margin-top: 20px;
+          display: block;
+          width: 100px;
+          height: 50px;
+      }
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .bottom-navigation {
+          display: block;
+      }
+      /* open the dropdown menu upwards */
+      .bottom-navigation {
+          bottom: 200px;
+      }
+      .large-text {
+        font-size: 0.7rem;
+        font-weight: 900;
+      }
+
+      }
+
+      .learn-more {
+        height: 100px;
+        text-align: center;
+      }
+      .test {
+        height: 100px;
+        text-align: center;
+      }
+  </style>
   </head>
   <body>
-    <!-- YOUR HTML GOES HERE -->
-
-    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+    <div><h1>Logo - Healthy Coffee</h1></div>
+    <main class="main">
+        <div></div>
+        <div class="title" style="background: red"> <p class="large-text">Healthy Coffee</p> </div>
+        <div class="functions">
+            <div class="learn-more" style="background: green"><p class="large-text">Learn more about the coffee</p></div>
+            <div class="test" style="background: blue"><p class="large-text">Test your knowledge</p></div>
+        </div>
+    </main>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="bottom-navigation">
+            <button>Start the Game</button>
+            <button>Healthy Coffee Info</button>
+            <button>About Us</button>
+        </div>
+    </div>
   </body>
 </html>
