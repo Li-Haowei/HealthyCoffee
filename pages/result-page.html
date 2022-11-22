@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        .main {
+            /* it will be a grid layout */
+            display: grid;
+            /* 2 rows and 2 columns */
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            height: 80vh;
+            padding: 0 5%;
+            background-color: yellow;
+        }
+        .main > div {
+            margin: 20px;
+        }
+        .details {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+        }
+        .details > div {
+            margin-bottom: 40px;
+        }
+        .bottom-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            height: 10vh;
+        }
+        .bottom-navigation > button {
+            margin: 20px;
+        }
+
+        .dropbtn {
+            /* in desktop mode it is invisible */
+            display: none;
+        }
+        /* media queries */
+        @media screen and (max-width: 768px) {
+            .main {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                /* fixed height and overflow scrollable */
+                height: 70vh;
+                overflow-y: scroll;
+            }
+             /*.bottom-navigation become a dropdown list of all buttons*/
+            /* Dropdown content (hidden by default) */
+        .bottom-navigation {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .bottom-navigation button {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        /* Add a grey background color to dropdown links on hover */
+        .bottom-navigation button:hover {
+        background-color: #ddd;
+        }
+        .dropdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dropbtn {
+            margin-top: 20px;
+            display: block;
+            width: 100px;
+            height: 50px;
+        }
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .bottom-navigation {
+            display: block;
+        }
+        /* open the dropdown menu upwards */
+        .bottom-navigation {
+            bottom: 200px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div><h1>Logo - Healthy Coffee</h1></div>
+    <main class="main">
+        <div class="report" style="background: red"></div>
+        <div class="details">
+            <div class="coffee-img" style="background: green"></div>
+            <div class="ingredients" style="background: blue"></div>
+        </div>
+    </main>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="bottom-navigation">
+            <button>Restart the Game</button>
+            <button>Healthy Coffee Info</button>
+            <button>About Us</button>
+        </div>
+    </div>
+</body>
+</html>
