@@ -65,7 +65,7 @@ display: block;
 text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* Add a #acd1c2 background color to dropdown links on hover */
 .bottom-navigation button:hover {
 background-color: #ddd;
 }
