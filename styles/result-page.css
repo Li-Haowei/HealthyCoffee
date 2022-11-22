@@ -1,5 +1,3 @@
-/* ===== YOUR CSS GOES HERE ===== */
-/* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 body {
     background-color: gray;
 }
@@ -7,8 +5,8 @@ body {
     /* it will be a grid layout */
     display: grid;
     /* 2 rows and 2 columns */
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     height: 80vh;
     padding: 0 5%;
     background-color: yellow;
@@ -16,15 +14,14 @@ body {
 .main > div {
     margin: 20px;
 }
-.functions {
+.details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     height: 100%;
 }
-.functions > div {
-  margin: 0 20px;
-  margin: 40px;
+.details > div {
+    margin-bottom: 40px;
 }
 .bottom-navigation {
     display: grid;
@@ -39,18 +36,6 @@ body {
 .dropbtn {
     /* in desktop mode it is invisible */
     display: none;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.large-text {
-  font-size: 2rem;
-  font-weight: 900;
 }
 /* media queries */
 @media screen and (max-width: 768px) {
@@ -103,18 +88,5 @@ background-color: #ddd;
 .bottom-navigation {
     bottom: 200px;
 }
-.large-text {
-  font-size: 0.7rem;
-  font-weight: 900;
-}
 
-}
-
-.learn-more {
-  height: 100px;
-  text-align: center;
-}
-.test {
-  height: 100px;
-  text-align: center;
 }
