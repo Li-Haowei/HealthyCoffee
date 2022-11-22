@@ -1,7 +1,7 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 body {
-    background-color: gray;
+    background-color: #acd1af;
 }
 .main {
     /* it will be a grid layout */
@@ -11,7 +11,7 @@ body {
     grid-template-rows: 1fr 2fr 2fr;
     height: 80vh;
     padding: 0 5%;
-    background-color: yellow;
+    background-color: #e5d3b3;
 }
 .main > div {
     margin: 20px;
