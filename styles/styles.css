@@ -82,7 +82,7 @@ text-align: left;
 
 /* Add a #acd1af background color to dropdown links on hover */
 .bottom-navigation button:hover {
-background-color: #ddd;
+background-color: #d2b48c;
 }
 .dropdown {
     display: flex;
